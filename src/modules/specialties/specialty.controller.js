@@ -4,7 +4,7 @@ import * as adminService from "./specialty.service.js";
 export async function createSpecialty(req, res, next) {
   const specialty = await adminService.createSpecialty(req.body);
 
-  return res.status(201).json({
+  return res.status(200).json({
     success: true,
     message: "Specialty created successfully",
     data: specialty,
